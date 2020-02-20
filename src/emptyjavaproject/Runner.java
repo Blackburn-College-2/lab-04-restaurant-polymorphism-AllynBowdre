@@ -9,7 +9,7 @@ import edu.blackburn.cs.cs212.restaurantbase.*;
 
 /**
  *
- * @author paul.kline
+ * estimated time 28hrs
  */
 public class Runner {
 
