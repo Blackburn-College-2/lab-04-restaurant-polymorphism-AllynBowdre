@@ -9,7 +9,7 @@ import edu.blackburn.cs.cs212.restaurantbase.*;
 
 /**
  *
- * estimated time 28hrs
+ * estimated time 55 hrs
  */
 public class Runner {
 
@@ -31,6 +31,19 @@ public class Runner {
         receipt1.add(Smores);
 
         System.out.println(receipt1.prepare());
+        
+        FancyCoffee MochaC = new FancyCoffee("Mocha", new Money(new Currency("Dollars", "$"), 3), new size("Large"));
+        MochaC.add(new Syrup("Chocolate",new Money(new Currency("Dollars", "$"),0.50)));
+        
+        Receipt receipt2 = new Receipt();
+        receipt2.add(MochaC);
+        
+        Sandwich sandwich = new Sandwich("Ham Sandwich",new Money(new Currency("Dollars", "$"), 6));
+        receipt2.add(sandwich);
+  
+
+        System.out.println(receipt2.prepare());
+
     }
 
 }
