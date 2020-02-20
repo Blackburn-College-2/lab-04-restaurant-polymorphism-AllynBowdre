@@ -9,7 +9,7 @@ package emptyjavaproject;
  *
  * @author paul.kline
  */
-public class Main {
+public class Runner {
 
     /**
      * @param args the command line arguments
