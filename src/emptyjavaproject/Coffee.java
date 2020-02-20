@@ -13,24 +13,26 @@ import edu.blackburn.cs.cs212.restaurantbase.Money;
  * @author allyn
  */
 public class Coffee extends MenuItem {
-
-    public Coffee(String name, Money basePrice) {
+    String name = super.getName();
+    size Size;
+    public Coffee(String name, Money basePrice,size Size) {
         super(name, basePrice);
+        this.Size=Size;
     }
    
     @Override
     public String toString(){
-        return"";
+        return this.Size  + "\t" + getReceiptItem() +"\t" + getPrice();
     }
 
     @Override
     public Money getPrice() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return super.getBasePrice();
     }
 
     @Override
     public String getReceiptItem() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.Size  + "\t" + name +"\t" + getPrice() + "\n";
     }
     
 }
